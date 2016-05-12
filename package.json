@@ -1,0 +1,36 @@
+{
+  "name": "ng2pluscanvas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "postinstall": "typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Humakt83/aqu-choice.git"
+  },
+  "keywords": [
+    "angular2",
+    "paperjs"
+  ],
+  "homepage": "https://github.com/Humakt83/ng2pluscanvas#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.17",
+    "es6-shim": "^0.35.0",
+    "paper": "^0.9.25",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.6",
+    "systemjs": "^0.19.26",
+    "zone.js": "^0.6.11"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  }
+}

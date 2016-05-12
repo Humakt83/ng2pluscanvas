@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>ng2pluscanvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="lib/es6-shim.min.js"></script>
+    <script src="lib/system-polyfills.js"></script>
+    <script src="lib/angular2-polyfills.min.js"></script>
+    <script src="lib/system.js"></script>
+    <script src="lib/system.src.js"></script>
+    <script src="lib/Rx.min.js"></script>
+    <script src="lib/angular2.min.js"></script>
+    <script src="lib/paper-full.js"></script>
+    <script>
+          System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
+          System.import('app/boot')
+                .then(null, console.error.bind(console));
+    </script>
+    </head>
+    <body>
+        <main>Loading...</main>
+    </body>
+</html>

@@ -3,3 +3,8 @@ body {
     height: 100%;
     color: white;
 }
+
+canvas {
+    width: 500px;
+    height: 500px;
+}

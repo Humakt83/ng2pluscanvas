@@ -2,11 +2,11 @@ import { Component, ViewChild, ElementRef, AfterViewChecked } from 'angular2/cor
 
 @Component({
     selector: 'drawingcanvas',
-    template: `<canvas #canvas (mousedown)="startDrawing($event)" (mouseup)="stopDrawing($event)"></canvas>`
+    template: `<canvas #drawingcanvas (mousedown)="startDrawing($event)" (mouseup)="stopDrawing($event)"></canvas>`
 })
 export class DrawingCanvas implements AfterViewChecked {
     
-    @ViewChild('canvas') canvasElement : ElementRef;
+    @ViewChild('drawingcanvas') canvasElement : ElementRef;
     
     private rendered : boolean = false;
     private simplePaper : any;
@@ -16,12 +16,14 @@ export class DrawingCanvas implements AfterViewChecked {
         if (this.rendered) return;
         this.rendered = true;
         this.simplePaper = new paper.PaperScope();
-        this.simplePaper.setup(this.canvasElement.nativeElement);
+        let canvas = this.canvasElement.nativeElement;
+        canvas.height = 600;
+        canvas.width = 600;
+        this.simplePaper.setup(canvas);
         this.simplePaper.view.draw();
     }
     
     startDrawing(event: MouseEvent) {
-        console.log(event);
         this.path = new this.simplePaper.Path();
         this.path.strokeColor = 'white';        
         this.path.moveTo(this.getPoint(event));

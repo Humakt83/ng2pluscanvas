@@ -2,11 +2,11 @@ import { Component, ViewChild, ElementRef, AfterViewChecked } from 'angular2/cor
 
 @Component({
     selector: 'simplecanvas',
-    template: `<canvas #canvas></canvas>`
+    template: `<canvas #simplecanvas></canvas>`
 })
 export class SimpleCanvas implements AfterViewChecked {
     
-    @ViewChild('canvas') canvasElement : ElementRef;
+    @ViewChild('simplecanvas') canvasElement : ElementRef;
     
     private rendered : boolean = false;
     

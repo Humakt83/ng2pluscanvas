@@ -51,10 +51,6 @@ export class MultipleCanvas implements AfterViewChecked {
         paper.view.draw();
     }
     
-    private createCircle(paper : any, c) {
-        
-    }
-    
     private getPoint(event: MouseEvent, paper: any) : any {
         return new paper.Point(event.layerX, event.layerY);
     }

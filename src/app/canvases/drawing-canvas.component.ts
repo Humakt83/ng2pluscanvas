@@ -13,7 +13,10 @@ export class DrawingCanvas implements AfterViewChecked {
     private path : any;
     
     ngAfterViewChecked() {
-        if (this.rendered) return;
+        if (this.rendered) {
+            this.simplePaper.activate(); 
+            return;
+        }
         this.rendered = true;
         this.simplePaper = new paper.PaperScope();
         let canvas = this.canvasElement.nativeElement;

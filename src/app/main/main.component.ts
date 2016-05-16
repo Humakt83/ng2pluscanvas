@@ -6,11 +6,12 @@ import { DrawingCanvas } from '../canvases/drawing-canvas.component';
 import { SelectableCanvas } from '../canvases/selectable-canvas.component';
 import { MultipleCanvas } from '../canvases/multiple-canvas.component';
 import { ZoomingCanvas } from '../canvases/zooming-canvas.component';
+import { MultipleItemCanvas } from '../canvases/multiple-item-canvas.component';
 
 @Component({
   selector: 'main',
   templateUrl: 'app/main/main.html',
-  directives: [CanvasTabs, CanvasTab, SimpleCanvas, DrawingCanvas, SelectableCanvas, MultipleCanvas, ZoomingCanvas]
+  directives: [CanvasTabs, CanvasTab, SimpleCanvas, DrawingCanvas, SelectableCanvas, MultipleCanvas, ZoomingCanvas, MultipleItemCanvas]
 })
 export class MainComponent {
 }

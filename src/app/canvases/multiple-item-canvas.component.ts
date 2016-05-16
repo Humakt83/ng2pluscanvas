@@ -32,9 +32,15 @@ export class MultipleItemCanvas implements AfterViewChecked {
             } else {
                 xAxis += 20;
             }
-            let myCircle = new this.simplePaper.Path.Circle(new this.simplePaper.Point(xAxis, yAxis), 8);
-            myCircle.fillColor = new paper.Color(Math.random(), Math.random(), Math.random());
-            this.circles.push(myCircle);
+            let obj : any;
+            if (i % 3 === 0) {
+                obj = new this.simplePaper.Path.Rectangle(new this.simplePaper.Point(xAxis, yAxis), new this.simplePaper.Size(12, 12));
+                obj.fillColor = new paper.Color(Math.random(), Math.random(), Math.random());
+            } else {
+                obj = new this.simplePaper.Path.Circle(new this.simplePaper.Point(xAxis, yAxis), 8);
+                obj.fillColor = new paper.Color(Math.random(), Math.random(), Math.random());
+            }            
+            this.circles.push(obj);
         }        
         this.simplePaper.view.draw();
     }

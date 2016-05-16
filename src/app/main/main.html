@@ -1,5 +1,31 @@
 <canvastabs>
-
+    
+    <canvastab tabTitle="Info">
+        <div class="info">
+            <h2>Info</h2>
+            
+            <p>
+            This page is a simple testing field for angular2 + canvas experiments using paperjs.
+            </p>
+            
+            <span>Canvas vs dom in angular2</span>
+            <li type="none">
+                <ul>+ Less styles</ul>
+                <ul>+ More performance (this is a common opinion not really verified by these tests)</ul>
+                <ul>+ Ability to create complex graphics more straightforwardy than with CSS3</ul>
+                <ul>+/- different browsers can cause variety of challenges (as with css styles and dom elements)</ul>
+                <ul>- Some learning curve</ul>
+                <ul>- More code</ul>
+                <ul>- Angular2's component model is more ideal working with dom</ul>
+                <ul>- Interactivity with user is more of a challenge</ul>            
+            </li>
+            <span>To minify risks</span>
+            <li>
+                <ul>Create components in canvas with modularity and reusability in mind - this should make migration to DOM easier when it is necessary</ul>
+            </li>
+        </div>
+    </canvastab>
+    
     <canvastab tabTitle="Simple">
         <simplecanvas></simplecanvas>
     </canvastab>
@@ -27,5 +53,13 @@
     <canvastab tabTitle="1000">
         <multipleitemcanvas [amount]="1000"></multipleitemcanvas>
     </canvastab>
+    
+    <canvastab tabTitle="10000">
+        <multipleitemcanvas [amount]="10000"></multipleitemcanvas>
+    </canvastab>
+
+    <canvastab tabTitle="DOM">
+        <multipleitemdom></multipleitemdom>
+    </canvastab>   
 
 </canvastabs>

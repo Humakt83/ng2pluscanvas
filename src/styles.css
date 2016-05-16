@@ -19,3 +19,20 @@ canvas {
 a {
     color: white;
 }
+
+.item {
+    display: inline-block;
+    background-color: aqua;
+    color: black;
+    padding: 5px;
+    border-radius: 45px; 
+}
+
+.itemSelected {
+    background-color: black;
+    color: aqua;
+}
+
+.info {
+    margin-left: 15px;    
+}

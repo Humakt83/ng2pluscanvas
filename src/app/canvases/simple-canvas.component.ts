@@ -14,7 +14,10 @@ export class SimpleCanvas implements AfterViewChecked {
         if (this.rendered) return;
         this.rendered = true;
         let simplePaper = new paper.PaperScope();
-        simplePaper.setup(this.canvasElement.nativeElement);
+        let canvas = this.canvasElement.nativeElement;
+        canvas.width = 600;
+        canvas.height = 600;
+        simplePaper.setup(canvas);
         let path = new simplePaper.Path();
 	    path.strokeColor = 'white';
 	    path.moveTo(new simplePaper.Point(10, 10));
